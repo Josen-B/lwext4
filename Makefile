@@ -29,6 +29,13 @@ define generate_common
 	-DCMAKE_TOOLCHAIN_FILE=../toolchain/$(1).cmake ..
 endef
 
+ARCH ?= x86_64
+#Output: src/liblwext4.a
+musl-generic:
+	$(call generate_common,$@)
+	cd build_$@ && make lwext4
+	cp build_$@/src/liblwext4.a ./liblwext4-$(ARCH).a
+
 generic:
 	$(call generate_common,$@)
 
