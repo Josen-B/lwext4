@@ -19,6 +19,8 @@ COMMON_DEFINITIONS =                                      \
 	-DVERSION_MINOR=$(VERSION_MINOR)                      \
 	-DVERSION_PATCH=$(VERSION_PATCH)                      \
 	-DVERSION=$(VERSION)                                  \
+	-DLWEXT4_BUILD_SHARED_LIB=OFF \
+	-DCMAKE_INSTALL_PREFIX=./install \
 
 define generate_common
 	rm -R -f build_$(1)

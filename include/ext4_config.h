@@ -137,7 +137,7 @@ extern "C" {
 
 /**@brief   Maximum block device count*/
 #ifndef CONFIG_EXT4_BLOCKDEVS_COUNT
-#define CONFIG_EXT4_BLOCKDEVS_COUNT 2
+#define CONFIG_EXT4_BLOCKDEVS_COUNT 8
 #endif
 
 /**@brief   Maximum mountpoint name*/
